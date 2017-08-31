@@ -1,0 +1,346 @@
+@import "whitespace-reset-modified.css"
+@import "mixins"
+
+body
+  background: url("../images/background-image.png") repeat
+  font: normal 14px "Lucianda", Helvetica, Arial, sans-serif
+
+main
+  width: 1000px
+
+body >
+  header,
+  footer
+    width: 1000px
+
+body >
+  header,
+  footer
+    border-bottom: 1px solid colors.bd_hf
+
+a
+  text-decoration: none
+  &:focus,
+  &:active
+    outline: none
+
+body > 
+  header
+    overflow: hidden
+    margin: 0 auto
+    padding: 50px 0
+    .logo
+      float: left
+      cursor: pointer
+    .cart
+      width: 220px
+      float: right
+      span
+        display: inline-block
+        box-sizing: border-box
+        font-size: 10px
+        letter-spacing: 1px
+      span.left
+        width: 50%
+        padding: 8px 5px
+        text-align: center
+        background: colors.black       
+        color: colors.red
+        uppercase_text()
+      span.right
+        width: 50%
+        text-align: center
+        button()
+        &:hover
+          bg_hover()
+        &:before
+          button_before(colors.black)
+      span.count
+        font-size: 12px
+
+main
+  margin: 0 auto
+  ul
+    font-size: 0
+    li
+      width: 200px
+      display: inline-block
+      font-size: 14px
+
+#cart
+  display: none
+  height: 120px
+  overflow: hidden
+  background: colors.black
+  color: #fff
+  ul
+    float: left
+    height: inherit
+    width: 700px
+    font-size: 0
+    li
+      width: 100px
+      text-align: right
+      font-size: 11px
+      img
+        width: 100%
+  section
+    float: right
+    width: 200px
+    padding: 20px 0 10px 15px
+    background: colors.light_black
+    h3
+      font-size: 10px
+      uppercase_text()
+      color: colors.red
+    .total
+      margin: 5px 0
+      font-size: 30px
+    footer
+      a
+        text-align: right
+        font-size: 10px
+        display: inline-block
+        box-sizing: border-box
+        font-size: 10px
+      a.left
+        width: 40%
+        color: #ff3170
+        uppercase_text() 
+      a.right
+        width: 60%
+        button()
+        &:hover
+          bg_hover()
+        &:before
+          button_before(colors.light_black)
+
+#items
+  li:nth-child(5n)
+    article
+      box-shadow: none
+  li
+    position: relative
+    height: 340px
+    margin: 20px 0 0 0
+    background: #fff
+    box-sizing: border-box
+    article
+      position: absolute
+      box-shadow: 2px 0px 2px -2px #888
+      z-index: 10
+    header
+      position: relative
+      margin: 0
+      padding: 0
+      border: none
+      cursor: pointer
+      &:hover
+        h2
+          color: colors.black
+        &:after
+          position: absolute
+          box-sizing: border-box
+          height: 200px
+          width: 200px
+          padding: 70px
+          top: 0
+          left: 0
+          background: rgba(0,0,0,0.6)
+          content: url("../images/arrow-right.png")
+          text-align: center
+      h2
+        margin: 25px 0 10px 0
+        text-align: center
+        text-transform: capitalize
+        font-weight: normal
+        font-size: 20px
+        letter-spacing: 1px
+        color: colors.h2
+    p
+      margin: 0 0 20px 0
+      text-align: center
+      letter-spacing: 1px
+      color: colors.red
+    .add_cart
+      display: block
+      padding: 13px 0
+      border-top: 1px dotted colors.red
+      text-align: center
+      uppercase_text()
+      font-size: 12px
+      cursor: pointer
+      color: colors.blood_red1
+      &:before
+        content: "+"
+        margin: 0 5px 0 0
+        display: inline-block
+        font-size: 14px
+        font-weight: bold
+      &:hover
+        color: #fff
+        background: colors.blood_red1
+        transition: color 0.75s, background 0.75s
+
+#item_details
+  position: relative
+  width: 1000px
+  min-height: 590px
+  margin: 20px 0 0 0;
+  sushi_preview_bg()
+  > div
+    position: absolute
+    height: 200px
+    top: 50%
+    margin: -100px 0 0 0
+    font-size: 0
+    > *
+      box-sizing: border-box
+      display: inline-block
+      height: inherit
+      font-size: 12px
+      vertical-align: middle
+    .nav
+      width: 100px
+      padding: 80px 0 0 0
+      background: colors.black
+      text-align: center
+      cursor: pointer
+      &:hover
+        color: colors.black
+        background: colors.blood_red1
+        transition: color 0.35s, background 0.35s
+    article,
+    aside
+      background: #fff
+    article
+      width: 400px
+      h1
+        margin: 25px 0 5px 25px
+        font-size: 35px
+        font-weight: normal
+      p
+        margin: 0 0 0 25px
+      footer
+        margin: 45px 0 0 0
+        border-top: 1px dotted colors.red
+        overflow: hidden
+        > *
+          display: inline-block
+        h2
+          margin: 20px 0 0 25px
+          font-size: 30px
+          font-weight: normal
+          color: #787878
+        .add_cart
+          float: right
+          margin: 20px 25px 0 0
+          button()
+          &:hover
+            bg_hover()
+          &:before
+            content: "+"
+            margin: 0 5px 0 0
+            display: inline-block
+            font-size: 14px
+            font-weight: bold
+      .close
+        float: right
+        margin: 10px 20px 0 0
+        transform: rotate(45deg)
+        font-size: 25px
+        color: colors.black
+    aside
+      width: 200px
+      padding: 0 20px
+      box-shadow: -1px 0px 2px 0px #aaa
+      h3
+        margin: 30px 0 15px 0
+        font-size: 13px
+        text-align: center
+        letter-spacing: 0.5px
+      table
+        width: 100%
+        tr
+          td
+            color: #787878
+            + td
+              text-align: right
+              color: colors.black
+
+#checkout >
+  div
+    sushi_preview_bg()
+    height: 60px
+  div.img_top
+    background-position: top
+  div.img_bottom
+    background-position: bottom
+  section
+    padding: 55px 100px
+    background: #fff
+    h1
+      margin: 0 0 60px 0
+      font-size: 40px
+    table
+      width: 800px
+      border-collapse: collapse
+      text-align: left
+      thead
+        uppercase_text()
+      tbody
+        td
+          border-top: 1px solid colors.red
+          border-bottom: 1px solid colors.red
+          img
+            height: 100px
+      td:nth-child(4),
+      th:nth-child(4)
+        text-align: right
+      td:nth-child(4)
+        font-size: 20px
+        letter-spacing: 2px
+      td:nth-child(2)
+        font-size: 20px
+      td:nth-child(3)
+        font-weight: bold
+        .quantity_modifier
+          margin: 0 10px
+          vertical-align: middle
+          border-radius: 100%
+          font-size: 12px
+          cursor: pointer
+        p
+          display: inline-block
+    > p
+      margin: 15px 0 0 0
+      text-align: right
+      font-size: 10px
+      uppercase_text()
+      color: #787878
+      .total
+        margin: 0 0 0 10px
+        font-size: 30px
+        letter-spacing: 2px
+        color: colors.black
+    footer
+      margin: 50px 0 0 0
+      text-align: right
+      a
+        color: #ff3170
+        uppercase_text()
+      form
+        display: inline-block
+        margin: 0 0 0 20px
+        input
+          border: none
+          button()
+          font-size: 14px
+          padding: 15px
+        &:hover
+          bg_hover()
+
+body >
+  footer
+    margin: 50px auto
+

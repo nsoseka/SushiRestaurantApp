@@ -1,0 +1,447 @@
+@import "whitespace-reset-modified.css";
+
+body {
+  background: url("../images/background-image.png") repeat;
+  font: normal 14px "Lucianda", Helvetica, Arial, sans-serif;
+}
+body > header,
+main,
+body > footer {
+  width: 1000px;
+}
+body > header,
+body > footer {
+  border-bottom: 1px solid #787878;
+}
+a {
+  text-decoration: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+body > header {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+body > header .logo {
+  float: left;
+  cursor: pointer;
+}
+body > header .cart {
+  width: 220px;
+  float: right;
+}
+body > header .cart span {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+body > header .cart span.left {
+  width: 40%;
+  color: #ff3170;
+  text-transform: uppercase;
+}
+body > header .cart span.right {
+  width: 60%;
+  color: #fff;
+  position: relative;
+  padding: 7px 15px 7px 10px;
+  background: linear-gradient(to bottom, #d60041 0%, #a90040 100%);
+  text-transform: uppercase;
+}
+body > header .cart span.right:hover {
+  background: linear-gradient(to bottom, #a90040 0%, #d60041 100%);
+}
+body > header .cart span.right:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 14px solid #000;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid #000;
+}
+body > header .cart span.left {
+  width: 50%;
+  padding: 8px 5px;
+  text-align: center;
+  background: #000;
+  color: #b0b0b0;
+}
+body > header .cart span.right {
+  width: 50%;
+  text-align: center;
+}
+body > header .cart span.count {
+  font-size: 12px;
+}
+main {
+  margin: 0 auto;
+}
+main ul {
+  font-size: 0;
+}
+main ul li {
+  width: 200px;
+  display: inline-block;
+  font-size: 14px;
+}
+#cart {
+  height: 120px;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+#cart ul {
+  float: left;
+  height: inherit;
+  width: 700px;
+  font-size: 0;
+}
+#cart ul li {
+  width: 100px;
+  text-align: right;
+  font-size: 11px;
+}
+#cart ul li img {
+  width: 100%;
+}
+#cart section {
+  float: right;
+  width: 200px;
+  padding: 20px 0 10px 15px;
+  background: #1f1f1f;
+}
+#cart section h3 {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #b0b0b0;
+}
+#cart section .total {
+  margin: 5px 0;
+  font-size: 30px;
+}
+#cart section footer a {
+  text-align: right;
+  font-size: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+#cart section footer a.left {
+  width: 40%;
+  color: #ff3170;
+  text-transform: uppercase;
+}
+#cart section footer a.right {
+  width: 60%;
+  color: #fff;
+  position: relative;
+  padding: 7px 15px 7px 10px;
+  background: linear-gradient(to bottom, #d60041 0%, #a90040 100%);
+  text-transform: uppercase;
+}
+#cart section footer a.right:hover {
+  background: linear-gradient(to bottom, #a90040 0%, #d60041 100%);
+}
+#cart section footer a.right:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 14px solid #1f1f1f;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid #1f1f1f;
+}
+#items li {
+  position: relative;
+  height: 340px;
+  margin: 20px 0 0 0;
+  background: #fff;
+  box-sizing: border-box;
+}
+#items li article {
+  position: absolute;
+  box-shadow: 2px 0px 2px -2px #888;
+  z-index: 10;
+}
+#items li:nth-child(5n) article {
+  box-shadow: none;
+}
+#items li header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+#items li header:hover h2 {
+  color: #000;
+}
+#items li header:hover:after {
+  position: absolute;
+  box-sizing: border-box;
+  height: 200px;
+  width: 200px;
+  padding: 70px;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  content: url("../images/arrow-right.png");
+  text-align: center;
+}
+#items li header h2 {
+  margin: 25px 0 10px 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #ab7829;
+}
+#items li p {
+  margin: 0 0 20px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #b0b0b0;
+}
+#items li .add_cart {
+  display: block;
+  padding: 13px 0;
+  border-top: 1px dotted #b0b0b0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  color: #d60041;
+}
+#items li .add_cart:before {
+  content: "+";
+  margin: 0 5px 0 0;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+}
+#items li .add_cart:hover {
+  color: #fff;
+  background: #d60041;
+  transition: color 0.75s, background 0.75s;
+}
+#item_details {
+  position: relative;
+  width: 1000px;
+  min-height: 590px;
+  margin: 20px 0 0 0;
+  background: url("../images/sushi-preview.png");
+}
+#item_details > div {
+  position: absolute;
+  height: 200px;
+  top: 50%;
+  margin: -100px 0 0 0;
+  font-size: 0;
+}
+#item_details > div > * {
+  box-sizing: border-box;
+  display: inline-block;
+  height: inherit;
+  font-size: 12px;
+  vertical-align: middle;
+}
+#item_details > div .nav {
+  width: 100px;
+  padding: 80px 0 0 0;
+  background: #000;
+  text-align: center;
+  cursor: pointer;
+}
+#item_details > div .nav:hover {
+  color: #000;
+  background: #d60041;
+  transition: color 0.35s, background 0.35s;
+}
+#item_details > div article,
+#item_details > div aside {
+  background: #fff;
+}
+#item_details > div article {
+  width: 400px;
+}
+#item_details > div article h1 {
+  margin: 25px 0 5px 25px;
+  font-size: 35px;
+  font-weight: normal;
+}
+#item_details > div article p {
+  margin: 0 0 0 25px;
+}
+#item_details > div article footer {
+  margin: 45px 0 0 0;
+  border-top: 1px dotted #b0b0b0;
+}
+#item_details > div article footer > * {
+  display: inline-block;
+}
+#item_details > div article footer h2 {
+  margin: 20px 0 0 25px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #787878;
+}
+#item_details > div article footer .add_cart {
+  float: right;
+  margin: 20px 25px 0 0;
+  color: #fff;
+  position: relative;
+  padding: 7px 15px 7px 10px;
+  background: linear-gradient(to bottom, #d60041 0%, #a90040 100%);
+  text-transform: uppercase;
+}
+#item_details > div article footer .add_cart:hover {
+  background: linear-gradient(to bottom, #a90040 0%, #d60041 100%);
+}
+#item_details > div article footer .add_cart:before {
+  content: "+";
+  margin: 0 5px 0 0;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+}
+#item_details > div article .close {
+  float: right;
+  margin: 10px 20px 0 0;
+  transform: rotate(45deg);
+  font-size: 25px;
+  color: #000;
+}
+#item_details > div aside {
+  width: 200px;
+  padding: 0 20px;
+  box-shadow: -1px 0px 2px 0px #aaa;
+}
+#item_details > div aside h3 {
+  margin: 30px 0 15px 0;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+#item_details > div aside table {
+  width: 100%;
+}
+#item_details > div aside table tr td {
+  color: #787878;
+}
+#item_details > div aside table tr td + td {
+  text-align: right;
+  color: #000;
+}
+#checkout > div {
+  background: url("../images/sushi-preview.png");
+  height: 60px;
+}
+#checkout > div.img_top {
+  background-position: top;
+}
+#checkout > div.img_bottom {
+  background-position: bottom;
+}
+#checkout > section {
+  padding: 55px 100px;
+  background: #fff;
+}
+#checkout > section h1 {
+  margin: 0 0 60px 0;
+  font-size: 40px;
+}
+#checkout > section table {
+  width: 800px;
+  border-collapse: collapse;
+  text-align: left;
+}
+#checkout > section table thead {
+  text-transform: uppercase;
+}
+#checkout > section table tbody td {
+  border-top: 1px solid #b0b0b0;
+  border-bottom: 1px solid #b0b0b0;
+}
+#checkout > section table tbody td img {
+  height: 100px;
+}
+#checkout > section table td:nth-child(4),
+#checkout > section table th:nth-child(4) {
+  text-align: right;
+}
+#checkout > section table td:nth-child(2) {
+  font-size: 20px;
+}
+#checkout > section table td:nth-child(3) {
+  font-weight: bold;
+}
+#checkout > section table td:nth-child(3) .quantity_modifier {
+  margin: 0 10px;
+  vertical-align: middle;
+  border-radius: 100%;
+  font-size: 12px;
+  cursor: pointer;
+}
+#checkout > section table td:nth-child(3) p {
+  display: inline-block;
+}
+#checkout > section table td:nth-child(4) {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+#checkout > section > p {
+  margin: 15px 0 0 0;
+  text-align: right;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #787878;
+}
+#checkout > section > p .total {
+  margin: 0 0 0 10px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #000;
+}
+#checkout > section footer {
+  margin: 50px 0 0 0;
+  text-align: right;
+}
+#checkout > section footer a {
+  color: #ff3170;
+  text-transform: uppercase;
+}
+#checkout > section footer form {
+  display: inline-block;
+  margin: 0 0 0 20px;
+}
+#checkout > section footer form input {
+  border: none;
+  color: #fff;
+  position: relative;
+  padding: 7px 15px 7px 10px;
+  background: linear-gradient(to bottom, #d60041 0%, #a90040 100%);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 15px;
+}
+#checkout > section footer form input:hover {
+  background: linear-gradient(to bottom, #a90040 0%, #d60041 100%);
+}
+body > footer {
+  margin: 50px auto;
+}

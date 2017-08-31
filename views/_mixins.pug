@@ -1,0 +1,8 @@
+mixin stylesheet_include_tag(src)
+	link(rel='stylesheet', href='/stylesheets/' + src + '.css')
+
+mixin javascript_include_tag(src, ...srcs)
+	script(type="text/javascript" src="/javascripts/" + src + '.js')
+	each src in srcs
+		script(type="text/javascript" src="/javascripts/" + src + '.js')
+

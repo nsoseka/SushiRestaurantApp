@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Sushi Restaurant Website</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/main.css">
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/"><img src="images/logo.png" alt="logo"></a>
+      <div class="cart">
+        <a href="/">
+          <span class="left">Shopping Cart</span><span class="right"><span class="count">1</span>
+            item
+          </span>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div id="cart">
+        <ul>
+          <li data-id="1">
+            <figure>
+              <img src="images/sashimi-salad.jpg" alt="cart-item">
+            </figure>
+            <p>2 x $12.00</p>
+          </li>
+        </ul>
+        <section>
+          <h3>Your<br>shopping cart</h3>
+          <p class="total">$24.00</p>
+          <p></p>
+          <footer>
+            <a class="left empty_cart" href="#">Empty cart</a><a class="right checkout" href="/checkout">Checkout</a>
+          </footer>
+        </section>
+      </div>
+      <div id="content">
+        <ul id="items">
+          <li data-id="1">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/sashimi-salad.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Sashimi salad</h2>
+              </header>
+              <p class="price">$12.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="2">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/chirashi-sushi.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Chirashi sushi</h2>
+              </header>
+              <p class="price">$21.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="3">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/seaweed-salad.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Seaweed salad</h2>
+              </header>
+              <p class="price">$17.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="4">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/edamame.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Edamame</h2>
+              </header>
+              <p class="price">$4.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="5">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/miso-soup.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Miso soup</h2>
+              </header>
+              <p class="price">$4.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="6">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/maguro.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Maguro</h2>
+              </header>
+              <p class="price">$12.50</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="7">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/shake.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Shake</h2>
+              </header>
+              <p class="price">$10.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="8">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/shiromi.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Shiromi</h2>
+              </header>
+              <p class="price">$9.50</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="9">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/tekka-maki.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Tekka maki</h2>
+              </header>
+              <p class="price">$6.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="10">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/hosomaki-mix.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Hosomaki Mix</h2>
+              </header>
+              <p class="price">$17.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="11">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/california-rolls.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">California rolls</h2>
+              </header>
+              <p class="price">$7.75</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="12">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/seattle-rolls.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Seattle rolls</h2>
+              </header>
+              <p class="price">$8.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="13">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/spicytuna-rolls.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Spicy Tuna rolls</h2>
+              </header>
+              <p class="price">$6.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="14">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/ebi-rolls.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Ebi rolls</h2>
+              </header>
+              <p class="price">$8.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="15">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/chicken-teriyaki.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Chicken Teriyaki</h2>
+              </header>
+              <p class="price">$12.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="16">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/salmon-teriyaki.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Salmon Teriyaki</h2>
+              </header>
+              <p class="price">$13.50</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="17">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/gohan.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Gohan</h2>
+              </header>
+              <p class="price">$3.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="18">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/tori-katsu.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Tori Katsu</h2>
+              </header>
+              <p class="price">$11.00</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+          <li data-id="19">
+            <article>
+              <header>
+                <figure>
+                  <img src="images/yaki-udon.jpg" alt="menu-item">
+                </figure>
+                <h2 class="name">Yaki Udon</h2>
+              </header>
+              <p class="price">$11.50</p>
+              <footer>
+                <a href="#" class="add_cart">Add to cart</a>
+              </footer>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>

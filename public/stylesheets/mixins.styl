@@ -1,0 +1,40 @@
+colors = {
+	bd_hf: #787878,
+	red: #b0b0b0,
+	black: #000,
+	light_black: #1f1f1f,
+	blood_red1: #d60041,
+	blood_red2: #a90040,
+	h2: #ab7829
+}
+
+uppercase_text()
+	text-transform: uppercase
+
+sushi_preview_bg()
+	background: url("../images/sushi-preview.png")
+
+button()
+	color: #fff
+	position: relative
+	padding: 7px 15px 7px 10px
+	background: linear-gradient(to bottom, colors.blood_red1 0%, colors.blood_red2 100%)
+	uppercase_text()
+
+bg_hover()
+	background: linear-gradient(to bottom, colors.blood_red2 0%, colors.blood_red1 100%)
+
+button_before(color)
+	content: ""
+	display: block
+	width: 0
+	height: 0
+	position: absolute
+	left: 0
+	top: 0
+	border-top: 14px solid color
+	border-right: 14px solid transparent
+	border-bottom: 14px solid transparent
+	border-left: 14px solid color
+
+
