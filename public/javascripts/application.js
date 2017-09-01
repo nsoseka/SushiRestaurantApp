@@ -5,7 +5,6 @@ var App = {
 		this.previous_item = 0;
 		this.renderItems();
 		this.createCart();
-		//this.createCheckout();
 		this.bindEvents();
 		this.showShusiTypes();
 	},
@@ -53,7 +52,6 @@ var App = {
 		App.$el.find("#content").html($(ul));
 	},
 	renderItems: function() {
-		//ul#items
 		this.createUl();
 		this.items.each(this.renderItemView);
 	},
@@ -65,19 +63,14 @@ var App = {
 	showCheckout: function() {
 		this.createCheckout();
 	},
-	subtract: function(id) {
-		this.checkout.reduce.call(this.checkout, id);
-	},
-	add: function(id) {
-		this.checkout.add_quantity.call(this.checkout, id);
+	updateRouter: function(href) {
+		router.navigate(href, { trigger: true });
 	},
 	bindEvents: function() {
 		_.extend(this, Backbone.Events);
 		this.on("add_to_cart", this.cart.addItem.bind(this.cart));
 		this.on("empty_cart", this.cart.emptyCart.bind(this.cart));
 		this.on("render_checkout", this.showCheckout);
-		this.on("reduce_quantity", this.subtract);
-		this.on("add", this.add);
 		this.on("show_item", this.showDetailedItem);
 	}
 };

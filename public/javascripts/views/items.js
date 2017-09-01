@@ -2,10 +2,12 @@ var ItemsView = Backbone.View.extend({
 	tagName: 'li',
 	events: {
 		"click a.add_cart": "add_item",
-		"click #items header": "showItem"
+		"click header": "showItem"
 	},
 	showItem: function() {
-		App.trigger("show_item", this.model);
+		var item_id = this.model.get("id") + "";
+		App.updateRouter(item_id);
+		App.trigger("show_item", item_id);
 	},
 	add_item: function(e) {
 		e.preventDefault();
@@ -16,7 +18,6 @@ var ItemsView = Backbone.View.extend({
 	render: function() {
 		this.$el.attr("data-id", this.model.get('id'));
 		this.$el.html(this.template(this.model.toJSON()));
-		//App.$el.find("#content div").hide();
 		App.$el.find("#content ul").append(this.$el);
 	},
 	initialize: function() {
@@ -24,5 +25,4 @@ var ItemsView = Backbone.View.extend({
 		this.model.view = this;
 	}
 });
-
 

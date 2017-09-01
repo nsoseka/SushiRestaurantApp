@@ -11,6 +11,7 @@ var CheckoutView = Backbone.View.extend({
 	},
 	order: function(e) {
 		e.preventDefault();
+		App.updateRouter("");
 		App.trigger("empty_cart");
 		App.init();
 	},
@@ -48,8 +49,6 @@ var CheckoutView = Backbone.View.extend({
 
 		App.$el.find("#cart").hide();
 		App.$el.find("#content").html(this.$el);
-		//this.$el.appendTo(App.$el.find("#content"));
-		//App.$el.find("#content").append(this.$el);
 	},
 	initialize: function() {
 		this.render();

@@ -6,8 +6,8 @@ var CartView = Backbone.View.extend({
 	},
 	checkOut: function(e) {
 		e.preventDefault();
-
-		//App.trigger("render_checkout");
+		App.updateRouter("checkout");
+		App.trigger("render_checkout");
 	},
 	emptyCart: function(e) {
 		e.preventDefault();
@@ -32,6 +32,4 @@ var CartView = Backbone.View.extend({
 		this.listenTo(this.collection, "cart_updated", this.render);
 	},
 });
-
-
 
